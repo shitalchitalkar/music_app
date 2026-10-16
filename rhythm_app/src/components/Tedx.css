@@ -1,0 +1,109 @@
+
+.tedx {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 100px 60px;
+  background: #151515;
+}
+
+.tedx-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.tedx-subtitle {
+  margin-bottom: 20px;
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.tedx h2 {
+  margin: 0;
+  color: white;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.tedx h2 span {
+  color: #e62b1e;
+}
+
+.tedx-description {
+  max-width: 520px;
+  margin: 25px 0;
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.tedx-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 30px;
+  border: 1px solid #e62b1e;
+  color: white;
+  background: #e62b1e;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.tedx-button:hover {
+  color: #e62b1e;
+  background: transparent;
+  transform: translateY(-3px);
+}
+
+.tedx-image {
+  flex: 1;
+  max-width: 550px;
+  height: 430px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.tedx-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tedx-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tedx {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 80px 25px;
+  }
+
+  .tedx h2 {
+    font-size: 46px;
+  }
+
+  .tedx-description {
+    font-size: 16px;
+  }
+
+  .tedx-image {
+    width: 100%;
+    max-width: none;
+    height: 300px;
+  }
+}

@@ -1,0 +1,211 @@
+
+    .about {
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+
+  padding: 100px 60px;
+
+  background: #111;
+}
+
+
+
+.about-content {
+     max-width: 650px;
+  flex: 1;
+
+}
+
+.about-subtitle {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #d4af37;
+
+}
+
+.about h2 {
+
+    margin: 0;
+
+    font-size: 56px;
+    line-height: 1.1;
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+    color: white;
+
+}
+
+.about-description {
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #aaa;
+
+}
+
+.about-image-wrapper {
+  position: relative;
+
+  width: 450px;
+  height: 500px;
+
+  flex-shrink: 0;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  border-radius: 4px;
+}
+
+/*for 10+ yr floating on image*/
+.about-card {
+  position: absolute;
+
+  right: -25px;
+  bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 25px;
+
+  background: rgba(17, 17, 17, 0.95);
+
+  border-left: 3px solid #d4af37;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-card strong {
+  font-size: 32px;
+  line-height: 1;
+
+  color: #d4af37;
+}
+
+.about-card span {
+  margin-top: 8px;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  color: #ccc;
+}
+/* for button */
+.about-button {
+  display: inline-block;
+
+  margin-top: 20px;
+  padding: 14px 30px;
+
+  border: 1px solid #d4af37;
+
+  background: transparent;
+  color: #d4af37;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease;
+}
+
+.about-button:hover {
+  background: #d4af37;
+  color: #111;
+
+  transform: translateY(-3px);
+}
+
+/*for mobile device responsiveness*/
+
+@media (max-width: 768px) {
+
+  .about {
+    min-height: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 50px;
+
+    padding: 80px 25px;
+  }
+
+  .about h2 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .about-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .about-image-wrapper {
+    width: 100%;
+    height: 420px;
+  }
+
+  .about-card {
+    right: 15px;
+    bottom: 20px;
+
+    padding: 16px 20px;
+  }
+
+  .about-card strong {
+    font-size: 26px;
+  }
+
+  .about-card span {
+    font-size: 11px;
+  }
+}
+
+/*for content animation*/
+.about-content {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-image-wrapper {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-image-wrapper.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
